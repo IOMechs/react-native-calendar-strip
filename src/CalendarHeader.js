@@ -53,11 +53,11 @@ class CalendarHeader extends Component {
     }
 
     if (firstDay.month() === lastDay.month()) {
-      return firstDay.format(calendarHeaderFormat);
+      return `${firstDay.format(calendarHeaderFormat)} ${firstDay.year()}`;
     } else if (firstDay.year() !== lastDay.year()) {
-      return `${firstDay.format(calendarHeaderFormat)} / ${lastDay.format(
+      return `${firstDay.format(calendarHeaderFormat)} ${firstDay.year()} / ${lastDay.format(
         calendarHeaderFormat
-      )}`;
+      )} ${lastDay.year()}`;
     }
 
     return `${
